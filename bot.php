@@ -12,7 +12,7 @@ function makecurl($method, $datas, $api){
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$server_output = curl_exec($ch);
 	curl_close($ch);
-	return jsone_decode($server_output);
+	return json_decode($server_output);
 }
 makecurl(
 		'sendMessage',
